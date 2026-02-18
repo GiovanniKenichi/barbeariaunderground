@@ -1,13 +1,18 @@
-// Fade ao rolar
-const fades = document.querySelectorAll(".fade");
+// remove preload (para não "piscar" as animações)
+window.addEventListener("load", () => {
+  document.body.classList.remove("preload");
+});
 
-const observer = new IntersectionObserver(
+// animação leve ao rolar
+const els = document.querySelectorAll(".reveal");
+
+const io = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("show");
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("show");
     });
   },
-  { threshold: 0.18 }
+  { threshold: 0.15 }
 );
 
-fades.forEach((el) => observer.observe(el));
+els.forEach((el) => io.observe(el));
