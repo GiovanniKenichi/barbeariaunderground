@@ -222,13 +222,6 @@ body:not(.preload) .reveal{
   align-items:center;
 }
 
-/* evita roxo/azul de link visitado */
-.hero-buttons a,
-.hero-buttons a:visited{
-  color: inherit !important;
-  text-decoration:none !important;
-}
-
 /* Ver serviços */
 .btn-secondary{
   background:rgba(255,255,255,.08);
@@ -537,3 +530,4 @@ body:not(.preload) .reveal{
 .hero-buttons .btn-maps:hover{
   color: #ffffff !important;
 }
+
