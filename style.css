@@ -1,0 +1,280 @@
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+:root{
+  --bg: #0b0b0b;
+  --text: #f2f2f2;
+  --muted: #cfcfcf;
+  --gold: #d4a72c;
+}
+
+body{
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f4f0;
+  color: #111;
+}
+
+/* Fade geral do site (entrada) */
+.site-fade{
+  animation: siteFade .7s ease both;
+}
+@keyframes siteFade{
+  from{ opacity: 0; transform: translateY(6px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+/* NAV */
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 48px;
+  background: rgba(10,10,10,.92);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  text-decoration:none;
+  color: #fff;
+}
+
+.brand img{
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  /* deixa a logo no “tom” do dourado */
+  filter: drop-shadow(0 0 10px rgba(212,167,44,.18));
+}
+
+.brand h2{
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .8px;
+}
+
+.brand span{ color: var(--gold); }
+
+.nav-links a{
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover{ color: #fff; }
+
+.nav-btn{
+  display:inline-block;
+  background: var(--gold);
+  color: #0b0b0b;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration:none;
+}
+
+.nav-btn--light{
+  background: rgba(212,167,44,.9);
+  color:#0b0b0b;
+}
+
+/* HERO */
+.hero{
+  height: 100vh;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  /* TROQUE AQUI se quiser outra imagem de fundo */
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.88)),
+    url("fotosdabarbearia/RenanCortando.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+  max-width: 720px;
+}
+
+.hero small{
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.hero h1{
+  margin-top: 14px;
+  font-size: 64px;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.02;
+}
+
+.hero h1 span{ color: var(--gold); }
+
+.hero p{
+  margin-top: 12px;
+  color: #d9d9d9;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* Botão WhatsApp maior */
+.btn-hero{
+  display:inline-block;
+  margin-top: 22px;
+  background: var(--gold);
+  color: #0b0b0b;
+  padding: 18px 30px;     /* maior */
+  border-radius: 14px;    /* mais premium */
+  font-weight: 900;
+  text-decoration:none;
+  font-size: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+  transition: transform .2s ease, filter .2s ease;
+}
+.btn-hero:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+/* SECTIONS */
+section{
+  padding: 110px 70px;
+}
+
+#sobre, #espaco, #servicos{
+  text-align: center;
+}
+
+section h2{
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: .5px;
+  margin-bottom: 18px;
+}
+
+section p{
+  color: #333;
+  font-size: 16px;
+}
+
+/* GALERIA: 3 fotos iguais e preenchidas */
+.gallery{
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery img{
+  width: 100%;
+  height: 260px;          /* altura fixa p/ ficar igual */
+  object-fit: cover;      /* preenche sem deformar */
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(0,0,0,.14);
+  transition: transform .25s ease;
+}
+
+.gallery img:hover{
+  transform: scale(1.02);
+}
+
+/* CARDS */
+.cards{
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card{
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.07);
+  text-align: left;
+}
+
+.card h3{
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.card p{
+  color: #555;
+  line-height: 1.55;
+}
+
+/* LOCALIZAÇÃO: fundo preto sólido */
+.localizacao{
+  background: #070707;
+  color: #fff;
+  text-align: center;
+}
+
+.localizacao-inner{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.localizacao h2{
+  color: #fff;
+}
+
+.endereco{
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.localizacao .nav-btn{
+  margin-top: 22px;
+}
+
+/* FOOTER com blur */
+.footer-blur{
+  background: rgba(10,10,10,.72);
+  backdrop-filter: blur(10px);
+  color: #d7d7d7;
+  text-align: center;
+  padding: 18px 12px;
+}
+
+/* FADE ao rolar (IntersectionObserver) */
+.fade{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.fade.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 980px){
+  nav{ padding: 14px 18px; }
+  .hero{ padding: 0 18px; }
+  .hero h1{ font-size: 44px; }
+  section{ padding: 80px 18px; }
+  .gallery{ grid-template-columns: 1fr; }
+  .gallery img{ height: 240px; }
+}
