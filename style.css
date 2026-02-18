@@ -400,9 +400,11 @@ body:not(.preload) .reveal{
 }
 .price{
   display:inline-block;
-  margin-top:30px;
+  margin-top:16px;
   font-weight:900;
-  color: rgba(20,20,20,.75);
+  font-size:30px;
+  letter-spacing:-0.5px;
+  color:#111;
 }
 .card.highlight{
   border-color: rgba(212,175,55,.35);
@@ -512,5 +514,6 @@ section{
     padding: 60px 20px;
   }
 }
+
 
 
