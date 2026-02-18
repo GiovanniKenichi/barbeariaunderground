@@ -2,19 +2,19 @@
   --gold:#d4af37;
   --gold2:#c39d2f;
   --black:#070707;
-  --black2:#0e0e0e;
   --off:#f6f3ee;
   --white:#ffffff;
-  --muted: rgba(255,255,255,.72);
   --text:#141414;
+
   --shadow: 0 18px 45px rgba(0,0,0,.22);
   --shadowSoft: 0 12px 26px rgba(0,0,0,.12);
+
   --radius: 18px;
   --radius2: 22px;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
 body{
   font-family:'Montserrat', sans-serif;
   background: var(--off);
@@ -39,25 +39,12 @@ body:not(.preload) .reveal{
   width:min(1120px, 92%);
   margin:0 auto;
 }
-.section{
-  padding:84px 0;
-}
+.section{ padding:84px 0; }
 .section-light{ background: var(--off); }
-.section-dark{
-  background: #060606;
-  color:#fff;
-}
-.kicker-gold{ color: rgba(212,175,55,.9); }
+.section-dark{ background:#060606; color:#fff; }
+
 .section-dark .section-head p{ color: rgba(255,255,255,.72); }
 .muted{ color: rgba(255,255,255,.72); }
-
-/* (se você usa <section> sem classe, mantém um padding agradável) */
-section{
-  padding: 80px 8%;
-}
-@media (max-width: 750px){
-  section{ padding: 60px 20px; }
-}
 
 /* ====== HEADER / NAV ====== */
 .header{
@@ -88,7 +75,7 @@ section{
   height:auto;
   display:block;
 
-  /* força mesma cor do texto dourado */
+  /* deixa a logo no tom dourado (aprox) */
   filter:
     brightness(0)
     saturate(100%)
@@ -97,40 +84,21 @@ section{
     saturate(470%)
     hue-rotate(4deg)
     brightness(95%)
-    contrast(90%);
-
-  drop-shadow(0 8px 20px rgba(0,0,0,.35));
+    contrast(90%)
+    drop-shadow(0 8px 20px rgba(0,0,0,.35));
 }
 .brand-text{
   display:flex;
   align-items:baseline;
   gap:8px;
 }
-.brand-name{
-  font-weight:900;
-  letter-spacing:1px;
-}
-.brand-sub{
-  font-weight:900;
-  letter-spacing:1px;
-  color: var(--gold);
-}
+.brand-name{ font-weight:900; letter-spacing:1px; }
+.brand-sub{ font-weight:900; letter-spacing:1px; color: var(--gold); }
 
 .nav-links{
   display:flex;
   align-items:center;
   gap:26px;
-}
-.nav-links a{
-  color: rgba(255,255,255,.84);
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  transition: color .2s ease, transform .2s ease;
-}
-.nav-links a:hover{
-  color:#fff;
-  transform: translateY(-1px);
 }
 
 /* ====== BOTÕES (BASE) ====== */
@@ -147,7 +115,6 @@ section{
   transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
   cursor:pointer;
 }
-
 .btn-big{
   padding:16px 26px;
   border-radius:14px;
@@ -163,15 +130,6 @@ section{
   background: var(--gold2);
   transform: translateY(-2px);
   box-shadow: var(--shadowSoft);
-}
-
-.btn-ghost{
-  background: rgba(255,255,255,.08);
-  color:#fff;
-}
-.btn-ghost:hover{
-  background: rgba(255,255,255,.14);
-  transform: translateY(-2px);
 }
 
 .btn-whats{
@@ -255,7 +213,7 @@ section{
   flex-wrap:wrap;
 }
 
-/* ✅ BOTÕES “VER SERVIÇOS” + “VER NO MAPS” (sempre brancos) */
+/* ====== HERO BUTTONS (Ver serviços + Maps) ====== */
 .hero-buttons{
   display:flex;
   gap:12px;
@@ -264,7 +222,7 @@ section{
   align-items:center;
 }
 
-/* garante que links não fiquem roxos/azuis */
+/* evita roxo/azul de link visitado */
 .hero-buttons a,
 .hero-buttons a:visited{
   color: inherit !important;
@@ -275,7 +233,7 @@ section{
 .btn-secondary{
   background:rgba(255,255,255,.08);
   border:1px solid rgba(255,255,255,.18);
-  color:#fff; /* ✅ branco fixo */
+  color:#fff;
   padding:12px 18px;
   border-radius:12px;
   font-weight:700;
@@ -284,7 +242,6 @@ section{
 }
 .btn-secondary:hover{
   background:rgba(255,255,255,.14);
-  color:#fff;
   transform:translateY(-2px);
 }
 
@@ -292,7 +249,7 @@ section{
 .btn-maps{
   background:transparent;
   border:1px solid rgba(255,255,255,.25);
-  color:#fff; /* ✅ branco fixo */
+  color:#fff;
   padding:12px 18px;
   border-radius:12px;
   font-weight:700;
@@ -301,10 +258,10 @@ section{
 }
 .btn-maps:hover{
   background:rgba(255,255,255,.08);
-  color:#fff;
   transform:translateY(-2px);
 }
 
+/* ====== TRUST ====== */
 .trust{
   margin-top:24px;
   display:flex;
@@ -330,7 +287,7 @@ section{
   margin-top:4px;
 }
 
-/* Hero card */
+/* ====== HERO CARD ====== */
 .hero-card{
   background: rgba(10,10,10,.55);
   border: 1px solid rgba(255,255,255,.10);
@@ -376,6 +333,8 @@ section{
   font-size:12px;
   margin-bottom:10px;
 }
+.kicker-gold{ color: rgba(212,175,55,.9); }
+
 .section-head h2{
   font-size:44px;
   font-weight:900;
@@ -404,10 +363,7 @@ section{
   box-shadow: var(--shadowSoft);
   border: 1px solid rgba(0,0,0,.05);
 }
-.feature h3{
-  font-size:16px;
-  font-weight:900;
-}
+.feature h3{ font-size:16px; font-weight:900; }
 .feature p{
   margin-top:8px;
   color: rgba(20,20,20,.65);
@@ -446,7 +402,7 @@ section{
   justify-content:center;
 }
 
-/* ====== CARDS / SERVIÇOS ====== */
+/* ====== SERVIÇOS ====== */
 .cards{
   display:grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -460,10 +416,7 @@ section{
   box-shadow: var(--shadowSoft);
   border: 1px solid rgba(0,0,0,.05);
 }
-.card h3{
-  font-size:16px;
-  font-weight:900;
-}
+.card h3{ font-size:16px; font-weight:900; }
 .card p{
   margin-top:8px;
   color: rgba(20,20,20,.65);
@@ -536,6 +489,7 @@ section{
   font-weight:900;
   box-shadow: var(--shadowSoft);
   border: 1px solid rgba(0,0,0,.15);
+  transition: transform .2s ease, background .2s ease;
 }
 .whats-float:hover{
   background: var(--gold2);
@@ -557,8 +511,6 @@ section{
   .features{ grid-template-columns:1fr; }
   .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery{ grid-template-columns:1fr; }
-  .shot img{ height:240px; }
-  .nav-links{ gap:16px; }
 
   .hero-buttons{ flex-direction:column; width:100%; }
   .btn-secondary,.btn-maps{ width:100%; text-align:center; }
@@ -568,21 +520,4 @@ section{
   .hero-title{ font-size:42px; }
   .footer-inner{ flex-direction:column; text-align:center; }
   .brand-logo{ width:56px; }
-  .nav-links a{ font-size:13px; }
-
-
-/* ✅ FORÇA os botões "Ver serviços" e "Ver no Maps" a ficarem BRANCOS */
-.hero-buttons .btn-secondary,
-.hero-buttons .btn-maps{
-  color:#fff !important;
-}
-
-.hero-buttons .btn-secondary:visited,
-.hero-buttons .btn-maps:visited{
-  color:#fff !important;
-}
-
-.hero-buttons .btn-secondary:hover,
-.hero-buttons .btn-maps:hover{
-  color:#fff !important;
 }
