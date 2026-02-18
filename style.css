@@ -561,3 +561,18 @@ section{
   /* ✅ some com o "Sobre" no celular */
   .nav-links a[href="#sobre"]{ display:none !important; }
 }
+/* ✅ FORÇA os botões "Ver serviços" e "Ver no Maps" a ficarem BRANCOS */
+.hero-buttons .btn-secondary,
+.hero-buttons .btn-maps{
+  color:#fff !important;
+}
+
+.hero-buttons .btn-secondary:visited,
+.hero-buttons .btn-maps:visited{
+  color:#fff !important;
+}
+
+.hero-buttons .btn-secondary:hover,
+.hero-buttons .btn-maps:hover{
+  color:#fff !important;
+}
