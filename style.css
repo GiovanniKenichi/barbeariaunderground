@@ -558,9 +558,7 @@ section{
   .brand-logo{ width:56px; }
   .nav-links a{ font-size:13px; }
 
-  /* ✅ some com o "Sobre" no celular */
-  .nav-links a[href="#sobre"]{ display:none !important; }
-}
+
 /* ✅ FORÇA os botões "Ver serviços" e "Ver no Maps" a ficarem BRANCOS */
 .hero-buttons .btn-secondary,
 .hero-buttons .btn-maps{
@@ -576,3 +574,4 @@ section{
 .hero-buttons .btn-maps:hover{
   color:#fff !important;
 }
+
