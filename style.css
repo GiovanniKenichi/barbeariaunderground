@@ -521,3 +521,19 @@ body:not(.preload) .reveal{
   .footer-inner{ flex-direction:column; text-align:center; }
   .brand-logo{ width:56px; }
 }
+/* ===== FORÇA TEXTO BRANCO NOS BOTÕES DA HERO ===== */
+
+.hero-buttons .btn-secondary,
+.hero-buttons .btn-maps{
+  color: #ffffff !important;
+}
+
+.hero-buttons .btn-secondary:visited,
+.hero-buttons .btn-maps:visited{
+  color: #ffffff !important;
+}
+
+.hero-buttons .btn-secondary:hover,
+.hero-buttons .btn-maps:hover{
+  color: #ffffff !important;
+}
