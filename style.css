@@ -100,16 +100,14 @@ body:not(.preload) .reveal{
   align-items:center;
   gap:26px;
 }
-.nav-links a{
-  color: rgba(255,255,255,.84);
-  text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  transition: color .2s ease, transform .2s ease;
+/* LINKS DO MENU */
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  transition: all 0.3s ease;
 }
-.nav-links a:hover{
-  color: #000f;
-  transform: translateY(-1px);
+
+.nav-links a:hover {
+  color: #ffffff;
 }
 
 /* ====== Botões ====== */
@@ -507,5 +505,6 @@ body:not(.preload) .reveal{
   opacity:1;
   transform: translateY(0);
 }
+
 
 
