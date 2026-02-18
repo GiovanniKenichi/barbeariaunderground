@@ -503,21 +503,12 @@ body:not(.preload) .reveal{
 }
 
 /* ===== AJUSTE MOBILE GLOBAL ===== */
+section{
+  padding: 80px 8%;
+}
+
 @media (max-width: 768px){
-
   section{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 60px 20px;
   }
-
-  .hero-content{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  #sobre{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
 }
