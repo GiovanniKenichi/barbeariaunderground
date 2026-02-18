@@ -87,7 +87,19 @@ section{
   width:64px;
   height:auto;
   display:block;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,.35));
+
+  /* força mesma cor do texto dourado */
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(72%)
+    sepia(78%)
+    saturate(470%)
+    hue-rotate(4deg)
+    brightness(95%)
+    contrast(90%);
+
+  drop-shadow(0 8px 20px rgba(0,0,0,.35));
 }
 .brand-text{
   display:flex;
@@ -574,4 +586,5 @@ section{
 .hero-buttons .btn-maps:hover{
   color:#fff !important;
 }
+
 
