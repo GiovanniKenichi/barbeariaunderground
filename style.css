@@ -488,7 +488,7 @@ body:not(.preload) .reveal{
 }
 
 /* ====== Responsivo ====== */
-@media (max-width: 768px){
+@media (max-width: 750px){
   .hero-grid{grid-template-columns: 1fr; padding: 42px 0;}
   .hero-title{font-size:52px;}
   .features{grid-template-columns: 1fr;}
@@ -509,11 +509,12 @@ section{
   padding: 80px 8%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 750px){
   section{
     padding: 60px 20px;
   }
 }
+
 
 
 
