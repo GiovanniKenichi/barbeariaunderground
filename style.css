@@ -108,7 +108,7 @@ body:not(.preload) .reveal{
   transition: color .2s ease, transform .2s ease;
 }
 .nav-links a:hover{
-  color: #000;
+  color: #000f;
   transform: translateY(-1px);
 }
 
@@ -507,4 +507,5 @@ body:not(.preload) .reveal{
   opacity:1;
   transform: translateY(0);
 }
+
 
