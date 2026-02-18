@@ -400,7 +400,7 @@ body:not(.preload) .reveal{
 }
 .price{
   display:inline-block;
-  margin-top:16px;
+  margin-top:30px;
   font-weight:900;
   color: rgba(20,20,20,.75);
 }
@@ -512,4 +512,5 @@ section{
     padding: 60px 20px;
   }
 }
+
 
