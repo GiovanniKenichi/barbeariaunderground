@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Underground Barbearia</title>
 
-  <!-- SEO simples -->
   <meta name="description" content="Underground Barbearia em Braz Cubas - Mogi das Cruzes. Corte, barba e estilo. Agende pelo WhatsApp." />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
   <!-- Fonte -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +21,7 @@
 
 <body class="preload">
 
-  <!-- TOP BAR / NAV -->
+  <!-- HEADER / NAV -->
   <header class="header">
     <nav class="nav container">
       <a class="brand" href="#topo" aria-label="Underground Barbearia">
@@ -32,6 +31,12 @@
           <span class="brand-sub">BARBEARIA</span>
         </div>
       </a>
+
+      <div class="nav-links">
+        <a href="#localizacao" class="btn btn-light">Localização</a>
+      </div>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <main id="topo" class="hero">
@@ -55,19 +60,20 @@
 
         <div class="hero-cta">
           <a class="btn btn-whats btn-big" target="_blank" rel="noopener"
-             href="https://wa.me/+5511995102389?text=Oi!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Underground%20Barbearia.">
+             href="https://wa.me/5511995102389?text=Oi!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Underground%20Barbearia.">
             Agendar pelo WhatsApp
           </a>
+        </div>
 
         <div class="hero-buttons">
-  <a href="#servicos" class="btn-maps">Ver serviços</a>
+          <a href="#servicos" class="btn-secondary">Ver serviços</a>
 
-  <a href="https://www.google.com/maps?q=Av.+Manoel+Alves,+305,+Braz+Cubas,+Mogi+das+Cruzes+-+SP"
-     target="_blank" rel="noopener"
-     class="btn-maps">
-    Ver no Maps
-  </a>
-</div>
+          <a href="https://www.google.com/maps?q=Av.+Manoel+Alves,+305,+Braz+Cubas,+Mogi+das+Cruzes+-+SP"
+             target="_blank" rel="noopener"
+             class="btn-maps">
+            Ver no Maps
+          </a>
+        </div>
 
         <div class="trust">
           <div class="trust-item">
@@ -92,7 +98,6 @@
           </div>
 
           <div class="hero-card-img">
-            <!-- imagem destaque (pode trocar) -->
             <img src="fotosdabarbearia/RenatoFiltro.jpg" alt="Destaque Underground" />
           </div>
 
@@ -108,35 +113,8 @@
     </section>
   </main>
 
-  <!-- SOBRE -->
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="kicker">SOBRE</span>
-        <h2>Estilo, atitude e precisão</h2>
-        <p>
-          A Underground Barbearia é o lugar pra quem quer sair alinhado de verdade.
-          Do clássico ao moderno — com presença e acabamento.
-        </p>
-      </div>
-
-      <div class="features">
-        <div class="feature reveal">
-          <h3>Atendimento de verdade</h3>
-          <p>Você chega, conversa, decide o estilo — sem padrão genérico.</p>
-        </div>
-        <div class="feature reveal">
-          <h3>Acabamento premium</h3>
-          <p>Navalha, alinhamento e detalhes que levantam o visual.</p>
-        </div>
-        <div class="feature reveal">
-          <h3>Agendamento simples</h3>
-          <p>Clicou no WhatsApp, marcou. Rápido e direto.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ESPAÇO -->
+  <section id="espaco" class="section">
     <div class="container">
       <div class="section-head reveal">
         <span class="kicker">NOSSO ESPAÇO</span>
@@ -149,10 +127,10 @@
           <img src="fotosdabarbearia/RenanCortando.jpg" alt="Renan cortando" />
         </figure>
         <figure class="shot">
-          <img src="fotosdabarbearia/RenatoChapeu.webp" alt="Renato filtro" />
+          <img src="fotosdabarbearia/RenatoChapeu.webp" alt="Renato de chapéu" />
         </figure>
         <figure class="shot">
-          <img src="fotosdabarbearia/RenatoCortando.jpg" alt="Renan secador" />
+          <img src="fotosdabarbearia/RenatoCortando.jpg" alt="Renato cortando" />
         </figure>
       </div>
 
@@ -166,6 +144,7 @@
   </section>
 
   <!-- SERVIÇOS -->
+  <section id="servicos" class="section section-light">
     <div class="container">
       <div class="section-head reveal">
         <span class="kicker">SERVIÇOS</span>
@@ -208,15 +187,13 @@
     </div>
   </section>
 
-  <!-- LOCALIZAÇÃO (fundo preto, sem foto) -->
+  <!-- LOCALIZAÇÃO -->
   <section id="localizacao" class="section section-dark">
     <div class="container">
       <div class="section-head reveal">
         <span class="kicker kicker-gold">LOCALIZAÇÃO</span>
         <h2>Nossa localização</h2>
-        <p class="muted">
-          Endereço em destaque e botão direto pro Google Maps.
-        </p>
+        <p class="muted">Endereço em destaque e botão direto pro Google Maps.</p>
       </div>
 
       <div class="location-box reveal">
@@ -233,7 +210,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (blur) -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <p>Underground Barbearia • Braz Cubas • Mogi das Cruzes</p>
@@ -244,7 +221,7 @@
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <!-- WHATS FLOAT -->
   <a class="whats-float" target="_blank" rel="noopener"
      href="https://wa.me/5511995102389?text=Oi!%20Quero%20agendar%20na%20Underground.">
     <span class="whats-icon">✆</span>
