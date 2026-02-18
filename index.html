@@ -1,114 +1,262 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Underground Barbearia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonte (opcional, mas recomendo) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <!-- SEO simples -->
+  <meta name="description" content="Underground Barbearia em Braz Cubas - Mogi das Cruzes. Corte, barba e estilo. Agende pelo WhatsApp." />
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="site-fade">
+<body class="preload">
 
-<nav class="site-fade">
-  <a class="brand" href="#topo" aria-label="Underground Barbearia">
-    <img src="fotosdabarbearia/logo-underground-melhorada.png" alt="Logo Underground">
-    <h2>UNDERGROUND <span>BARBER</span></h2>
+  <!-- TOP BAR / NAV -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="#topo" aria-label="Underground Barbearia">
+        <img src="fotosdabarbearia/logo-underground-melhorada.png" alt="Logo Underground" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">UNDERGROUND</span>
+          <span class="brand-sub">BARBER</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#espaco">Espaço</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#localizacao" class="btn btn-light">Localização</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="topo" class="hero">
+    <div class="hero-bg"></div>
+
+    <section class="container hero-grid">
+      <div class="hero-left reveal">
+        <div class="pill">
+          <span class="dot"></span>
+          <span>BARZ CUBAS • MOGI DAS CRUZES</span>
+        </div>
+
+        <h1 class="hero-title">
+          BARBEARIA <span>UNDERGROUND</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Corte e barba com presença. Atendimento direto, rápido e sem enrolação.
+          Clique e agende agora no WhatsApp.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-whats btn-big" target="_blank" rel="noopener"
+             href="https://wa.me/+55 11 99510-2389?text=Oi!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Underground%20Barbearia.">
+            Agendar pelo WhatsApp
+          </a>
+
+          <a class="btn btn-ghost" href="#servicos">
+            Ver serviços
+          </a>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <strong>Atendimento</strong>
+            <span>Personalizado</span>
+          </div>
+          <div class="trust-item">
+            <strong>Acabamento</strong>
+            <span>Detalhista</span>
+          </div>
+          <div class="trust-item">
+            <strong>Agendamento</strong>
+            <span>WhatsApp</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span class="badge">⚡ Resposta rápida no WhatsApp</span>
+          </div>
+
+          <div class="hero-card-img">
+            <!-- imagem destaque (pode trocar) -->
+            <img src="fotosdabarbearia/RenatoCortando.jpg" alt="Destaque Underground" />
+          </div>
+
+          <div class="hero-card-bottom">
+            <p><strong>Quer agilizar?</strong> Manda “AGENDA” no WhatsApp e já te passamos horários.</p>
+            <a class="btn btn-whats" target="_blank" rel="noopener"
+               href="https://wa.me/+55 11 99510-2389?text=AGENDA">
+              Chamar agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section section-light">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">SOBRE</span>
+        <h2>Estilo, atitude e precisão</h2>
+        <p>
+          A Underground Barbearia é o lugar pra quem quer sair alinhado de verdade.
+          Do clássico ao moderno — com presença e acabamento.
+        </p>
+      </div>
+
+      <div class="features">
+        <div class="feature reveal">
+          <h3>Atendimento de verdade</h3>
+          <p>Você chega, conversa, decide o estilo — sem padrão genérico.</p>
+        </div>
+        <div class="feature reveal">
+          <h3>Acabamento premium</h3>
+          <p>Navalha, alinhamento e detalhes que levantam o visual.</p>
+        </div>
+        <div class="feature reveal">
+          <h3>Agendamento simples</h3>
+          <p>Clicou no WhatsApp, marcou. Rápido e direto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPAÇO -->
+  <section id="espaco" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">NOSSO ESPAÇO</span>
+        <h2>Um ambiente feito pra você</h2>
+        <p>3 fotos, mesmo tamanho, enquadradas e com cara profissional.</p>
+      </div>
+
+      <div class="gallery reveal">
+        <figure class="shot">
+          <img src="fotosdabarbearia/RenanCortando.jpg" alt="Renan cortando" />
+        </figure>
+        <figure class="shot">
+          <img src="fotosdabarbearia/RenatoChapeu.webp" alt="Renato filtro" />
+        </figure>
+        <figure class="shot">
+          <img src="fotosdabarbearia/RenatoCortando.jpg" alt="Renan secador" />
+        </figure>
+      </div>
+
+      <div class="center-cta reveal">
+        <a class="btn btn-whats btn-big" target="_blank" rel="noopener"
+           href="https://wa.me/+55 11 99510-2389?text=Oi!%20Quero%20agendar%20na%20Underground.">
+          Quero agendar agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section section-light">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">SERVIÇOS</span>
+        <h2>O que você encontra aqui</h2>
+        <p>Descrição clara e foco em chamar no WhatsApp pra confirmar valores e horários.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card reveal">
+          <h3>Corte Masculino</h3>
+          <p>Do clássico ao moderno, com acabamento preciso.</p>
+          <span class="price">Consultar valores</span>
+        </div>
+
+        <div class="card reveal">
+          <h3>Barba</h3>
+          <p>Modelagem, alinhamento e finalização.</p>
+          <span class="price">Consultar valores</span>
+        </div>
+
+        <div class="card reveal">
+          <h3>Pezinho & Navalha</h3>
+          <p>Detalhes que levantam o visual de verdade.</p>
+          <span class="price">Consultar valores</span>
+        </div>
+
+        <div class="card highlight reveal">
+          <h3>Combo Mensal</h3>
+          <p>Mais cortes no mês + desconto. Ideal pra manter sempre alinhado.</p>
+          <span class="price">Peça o plano no WhatsApp</span>
+        </div>
+      </div>
+
+      <div class="center-cta reveal">
+        <a class="btn btn-whats btn-big" target="_blank" rel="noopener"
+           href="https://wa.me/+55 11 99510-2389?text=Oi!%20Quero%20saber%20os%20valores%20e%20agendar.">
+          Ver valores e agendar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO (fundo preto, sem foto) -->
+  <section id="localizacao" class="section section-dark">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker kicker-gold">LOCALIZAÇÃO</span>
+        <h2>Nossa localização</h2>
+        <p class="muted">
+          Endereço em destaque e botão direto pro Google Maps.
+        </p>
+      </div>
+
+      <div class="location-box reveal">
+        <p class="address">
+          AV. MANOEL ALVES, 305 – BRAZ CUBAS<br />
+          MOGI DAS CRUZES – SP, 08740-260
+        </p>
+
+        <a class="btn btn-light btn-big" target="_blank" rel="noopener"
+           href="https://www.google.com/maps?q=Av.+Manoel+Alves,+305,+Braz+Cubas,+Mogi+das+Cruzes+-+SP,+08740-260">
+          Ver no Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (blur) -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Underground Barbearia • Braz Cubas • Mogi das Cruzes</p>
+      <a class="footer-link" target="_blank" rel="noopener"
+         href="https://wa.me/+55 11 99510-2389?text=Oi!%20Quero%20agendar%20um%20hor%C3%A1rio.">
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a class="whats-float" target="_blank" rel="noopener"
+     href="https://wa.me/+55 11 99510-2389?text=Oi!%20Quero%20agendar%20na%20Underground.">
+    <span class="whats-icon">✆</span>
+    <span class="whats-text">WhatsApp</span>
   </a>
 
-  <div class="nav-links">
-    <a href="#sobre">Sobre</a>
-    <a href="#espaco">Espaço</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#localizacao" class="nav-btn nav-btn--light">Localização</a>
-  </div>
-</nav>
-
-<section class="hero" id="topo">
-  <div class="hero-content">
-    <small>HÁ 3 ANOS TRANSFORMANDO ESTILOS</small>
-    <h1>BARBEARIA <span>UNDERGROUND</span></h1>
-    <p>Muito mais que um corte. Uma experiência completa de barbearia feita pra você.</p>
-
-    <a href="https://wa.me/55119504345474" target="_blank" rel="noopener" class="btn-hero">
-      Agendar pelo WhatsApp
-    </a>
-  </div>
-</section>
-
-<section id="sobre" class="fade">
-  <h2>ESTILO, ATITUDE E PRECISÃO</h2>
-  <p>A Underground Barbearia oferece cortes e barba com personalidade.</p>
-</section>
-
-<section id="espaco" class="fade">
-  <h2>NOSSO ESPAÇO</h2>
-
-  <div class="gallery">
-    <img src="fotosdabarbearia/RenanCortando.jpg" alt="Renan Cortando">
-    <img src="fotosdabarbearia/RenatoChapeu.webp" alt="Renato Chapeu">
-    <img src="fotosdabarbearia/RenatoCortando.jpg" alt="Renato Cortando">
-  </div>
-</section>
-
-<section id="servicos" class="fade">
-  <h2>SERVIÇOS</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Corte Masculino</h3>
-      <p>Do clássico ao moderno, com acabamento preciso.</p>
-    </div>
-
-    <div class="card">
-      <h3>Barba</h3>
-      <p>Modelagem, alinhamento e finalização.</p>
-    </div>
-
-    <div class="card">
-      <h3>Pezinho & Navalha</h3>
-      <p>Detalhes que levantam o visual de verdade.</p>
-    </div>
-
-    <div class="card">
-      <h3>Combo Mensal</h3>
-      <p>Mais cortes no mês + desconto. Chama no WhatsApp e saiba os valores.</p>
-    </div>
-  </div>
-</section>
-
-<section id="localizacao" class="localizacao fade">
-  <div class="localizacao-inner">
-    <h2>NOSSA LOCALIZAÇÃO</h2>
-
-    <p class="endereco">
-      AV. MANOEL ALVES, 305 – BRAZ CUBAS<br>
-      MOGI DAS CRUZES – SP, 08740-260
-    </p>
-
-    <a
-      href="https://www.google.com/maps?q=Av.+Manoel+Alves,+305,+Braz+Cubas,+Mogi+das+Cruzes+-+SP,+08740-260"
-      target="_blank"
-      rel="noopener"
-      class="nav-btn"
-    >
-      Ver no Google Maps
-    </a>
-  </div>
-</section>
-
-<footer class="footer-blur">
-  <p>Underground Barbearia • 3 anos de experiência</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
