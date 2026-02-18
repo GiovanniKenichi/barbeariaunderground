@@ -21,21 +21,20 @@ body{
   color: var(--text);
 }
 
-/* ====== PRELOAD fade geral ====== */
-.preload *{
-  transition:none !important;
-}
-body:not(.preload) .reveal{
-  opacity:1;
-  transform: translateY(0);
-}
+/* ====== PRELOAD / REVEAL ====== */
+.preload *{ transition:none !important; }
+
 .reveal{
   opacity:0;
   transform: translateY(18px);
   transition: opacity .7s ease, transform .7s ease;
 }
+body:not(.preload) .reveal{
+  opacity:1;
+  transform: translateY(0);
+}
 
-/* ====== layout ====== */
+/* ====== LAYOUT ====== */
 .container{
   width:min(1120px, 92%);
   margin:0 auto;
@@ -43,14 +42,24 @@ body:not(.preload) .reveal{
 .section{
   padding:84px 0;
 }
-.section-light{
-  background: var(--off);
+.section-light{ background: var(--off); }
+.section-dark{
+  background: #060606;
+  color:#fff;
 }
-.section{
-  background: #fff0;
+.kicker-gold{ color: rgba(212,175,55,.9); }
+.section-dark .section-head p{ color: rgba(255,255,255,.72); }
+.muted{ color: rgba(255,255,255,.72); }
+
+/* (se você usa <section> sem classe, mantém um padding agradável) */
+section{
+  padding: 80px 8%;
+}
+@media (max-width: 750px){
+  section{ padding: 60px 20px; }
 }
 
-/* ====== Header / Nav ====== */
+/* ====== HEADER / NAV ====== */
 .header{
   position:fixed;
   top:0; left:0; right:0;
@@ -108,11 +117,11 @@ body:not(.preload) .reveal{
   transition: color .2s ease, transform .2s ease;
 }
 .nav-links a:hover{
-  color: #fff;
+  color:#fff;
   transform: translateY(-1px);
 }
 
-/* ====== Botões ====== */
+/* ====== BOTÕES (BASE) ====== */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -129,13 +138,13 @@ body:not(.preload) .reveal{
 
 .btn-big{
   padding:16px 26px;
-  border-radius: 14px;
+  border-radius:14px;
   font-size:16px;
 }
 
 .btn-light{
   background: var(--gold);
-  color:#000;           /* texto preto (como você quer) */
+  color:#000;
   border-color: rgba(0,0,0,.15);
 }
 .btn-light:hover{
@@ -146,7 +155,7 @@ body:not(.preload) .reveal{
 
 .btn-ghost{
   background: rgba(255,255,255,.08);
-  color: #fff;
+  color:#fff;
 }
 .btn-ghost:hover{
   background: rgba(255,255,255,.14);
@@ -164,7 +173,7 @@ body:not(.preload) .reveal{
   box-shadow: var(--shadowSoft);
 }
 
-/* ====== Hero ====== */
+/* ====== HERO ====== */
 .hero{
   position:relative;
   min-height: 92vh;
@@ -234,6 +243,56 @@ body:not(.preload) .reveal{
   flex-wrap:wrap;
 }
 
+/* ✅ BOTÕES “VER SERVIÇOS” + “VER NO MAPS” (sempre brancos) */
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:14px;
+  align-items:center;
+}
+
+/* garante que links não fiquem roxos/azuis */
+.hero-buttons a,
+.hero-buttons a:visited{
+  color: inherit !important;
+  text-decoration:none !important;
+}
+
+/* Ver serviços */
+.btn-secondary{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff; /* ✅ branco fixo */
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  transition:.25s ease;
+  backdrop-filter:blur(6px);
+}
+.btn-secondary:hover{
+  background:rgba(255,255,255,.14);
+  color:#fff;
+  transform:translateY(-2px);
+}
+
+/* Ver no Maps */
+.btn-maps{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff; /* ✅ branco fixo */
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  transition:.25s ease;
+  backdrop-filter:blur(6px);
+}
+.btn-maps:hover{
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  transform:translateY(-2px);
+}
+
 .trust{
   margin-top:24px;
   display:flex;
@@ -280,7 +339,7 @@ body:not(.preload) .reveal{
 .hero-card-img img{
   width:100%;
   height: 280px;
-  object-fit: cover; /* enquadra certinho */
+  object-fit: cover;
   display:block;
 }
 .hero-card-bottom{
@@ -292,7 +351,7 @@ body:not(.preload) .reveal{
   margin-bottom:12px;
 }
 
-/* ====== Section Head ====== */
+/* ====== SECTION HEAD ====== */
 .section-head{
   text-align:center;
   margin-bottom:28px;
@@ -308,18 +367,18 @@ body:not(.preload) .reveal{
 .section-head h2{
   font-size:44px;
   font-weight:900;
-  letter-spacing: .5px;
+  letter-spacing:.5px;
 }
 .section-head p{
   margin-top:10px;
-  max-width: 820px;
+  max-width:820px;
   margin-left:auto;
   margin-right:auto;
   color: rgba(20,20,20,.65);
   line-height:1.7;
 }
 
-/* ====== Features ====== */
+/* ====== FEATURES ====== */
 .features{
   display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -343,7 +402,7 @@ body:not(.preload) .reveal{
   line-height:1.6;
 }
 
-/* ====== Gallery (3 fotos iguais) ====== */
+/* ====== GALLERY ====== */
 .gallery{
   display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -351,15 +410,15 @@ body:not(.preload) .reveal{
   margin-top:22px;
 }
 .shot{
-  border-radius: 20px;
+  border-radius:20px;
   overflow:hidden;
   box-shadow: var(--shadowSoft);
   background:#000;
 }
 .shot img{
   width:100%;
-  height: 240px;
-  object-fit: cover; /* evita borda preta */
+  height:240px;
+  object-fit:cover;
   display:block;
   transform: scale(1.01);
   transition: transform .25s ease, filter .25s ease;
@@ -375,7 +434,7 @@ body:not(.preload) .reveal{
   justify-content:center;
 }
 
-/* ====== Cards ====== */
+/* ====== CARDS / SERVIÇOS ====== */
 .cards{
   display:grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -411,15 +470,7 @@ body:not(.preload) .reveal{
   box-shadow: 0 18px 45px rgba(212,175,55,.12);
 }
 
-/* ====== Dark section ====== */
-.section-dark{
-  background: #060606;
-  color:#fff;
-}
-.kicker-gold{ color: rgba(212,175,55,.9); }
-.section-dark .section-head p{ color: rgba(255,255,255,.72); }
-.muted{ color: rgba(255,255,255,.72); }
-
+/* ====== LOCALIZAÇÃO ====== */
 .location-box{
   margin-top:18px;
   border-radius: var(--radius2);
@@ -436,7 +487,7 @@ body:not(.preload) .reveal{
   margin-bottom:16px;
 }
 
-/* ====== Footer blur ====== */
+/* ====== FOOTER ====== */
 .footer{
   background: rgba(0,0,0,.55);
   backdrop-filter: blur(12px);
@@ -456,7 +507,7 @@ body:not(.preload) .reveal{
 }
 .footer-link:hover{ color:#fff; }
 
-/* ====== Whats float ====== */
+/* ====== WHATS FLOAT ====== */
 .whats-float{
   position:fixed;
   right:18px;
@@ -466,7 +517,7 @@ body:not(.preload) .reveal{
   align-items:center;
   gap:10px;
   padding:14px 16px;
-  border-radius: 999px;
+  border-radius:999px;
   background: var(--gold);
   color:#000;
   text-decoration:none;
@@ -487,138 +538,26 @@ body:not(.preload) .reveal{
   font-weight:900;
 }
 
-/* ====== Responsivo ====== */
+/* ====== RESPONSIVO ====== */
 @media (max-width: 750px){
-  .hero-grid{grid-template-columns: 1fr; padding: 42px 0;}
-  .hero-title{font-size:52px;}
-  .features{grid-template-columns: 1fr;}
-  .cards{grid-template-columns: repeat(2, minmax(0, 1fr));}
-  .gallery{grid-template-columns: 1fr; }
-  .shot img{height:240px;}
-  .nav-links{gap:16px;}
-}
-@media (max-width: 520px){
-  .hero-title{font-size:42px;}
-  .footer-inner{flex-direction:column; text-align:center;}
-  .brand-logo{width:56px;}
-  .nav-links a{font-size:13px;}
-}
+  .hero-grid{ grid-template-columns:1fr; padding:42px 0; }
+  .hero-title{ font-size:52px; }
+  .features{ grid-template-columns:1fr; }
+  .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery{ grid-template-columns:1fr; }
+  .shot img{ height:240px; }
+  .nav-links{ gap:16px; }
 
-/* ===== AJUSTE MOBILE GLOBAL ===== */
-section{
-  padding: 80px 8%;
-}
-
-@media (max-width: 750px){
-  section{
-    padding: 60px 20px;
-  }
-}
-/* Container dos botões da hero */
-.hero-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:14px;
-}
-
-/* Botão Maps */
-.btn-maps{
-  background:transparent;
-  border:1px solid rgba(255,255,255,.25);
-  padding:12px 18px;
-  border-radius:12px;
-  font-weight:600;
-  text-decoration:none;
-  color:rgba(255,255,255,.85);
-  transition:.3s ease;
-  backdrop-filter:blur(6px);
-}
-
-.btn-maps:hover{
-  background:rgba(255,255,255,.08);
-  color:#fff;
-  transform:translateY(-2px);
-}
-@media(max-width:768px){
-  .hero-buttons{
-    flex-direction:column;
-    width:100%;
-  }
-
-  .btn-maps,
-  .btn-secondary{
-    width:100%;
-    text-align:center;
-  }
-}
-
-/* ===== Botões da HERO (Ver serviços + Maps) ===== */
-.hero-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:14px;
-  align-items:center;
-}
-
-/* garante que os links NÃO fiquem roxos/azuis */
-.hero-buttons a{
-  text-decoration:none !important;
-}
-
-/* seu botão secundário (Ver serviços) */
-.btn-secondary{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.18);
-  color:#fff;
-  padding:12px 18px;
-  border-radius:12px;
-  font-weight:700;
-  transition:.25s ease;
-  backdrop-filter:blur(6px);
-}
-.btn-secondary:hover{
-  background:rgba(255,255,255,.14);
-  color:#fff;
-  transform:translateY(-2px);
-}
-
-/* botão Maps */
-.btn-maps{
-  background:transparent;
-  border:1px solid rgba(255,255,255,.25);
-  color:#fff;
-  padding:12px 18px;
-  border-radius:12px;
-  font-weight:700;
-  transition:.25s ease;
-  backdrop-filter:blur(6px);
-}
-.btn-maps:hover{
-  background:rgba(255,255,255,.08);
-  color:#fff;
-  transform:translateY(-2px);
-}
-
-.hero-buttons a,
-.hero-buttons a:visited{
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-/* mobile: empilha */
-@media (max-width:768px){
-  .hero-buttons{flex-direction:column; width:100%;}
-  .btn-secondary,.btn-maps{width:100%; text-align:center;}
-}
-.hero-buttons a:visited{
-  color:inherit !important;
+  .hero-buttons{ flex-direction:column; width:100%; }
+  .btn-secondary,.btn-maps{ width:100%; text-align:center; }
 }
 
 @media (max-width: 520px){
-  .nav-links a[href="#sobre"]{
-    display: none !important;
-  }
-}
+  .hero-title{ font-size:42px; }
+  .footer-inner{ flex-direction:column; text-align:center; }
+  .brand-logo{ width:56px; }
+  .nav-links a{ font-size:13px; }
 
+  /* ✅ some com o "Sobre" no celular */
+  .nav-links a[href="#sobre"]{ display:none !important; }
+}
